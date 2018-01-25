@@ -16,13 +16,13 @@ int temp;
 temp=t;
 while(flag!=1)
 {
-temp=temp/power(i,10);
+temp=t/power(i,10);
 if (temp>=1)
 i++;
 else
 flag=1;
 }
-return(i+1);
+return(i);
 }
 
 
@@ -37,16 +37,23 @@ int temp1 ,temp2;
 temp1=bin;
 for(int i=(size-1);i>=0;i--)
 {
-temp2=bin/(power(i,10));
+temp2=temp1/(power(i,10));
 a[i]=temp2;
-temp1=bin-power(i,10);
+if(temp2>=1)
+{temp1=temp1-power(i,10);
 num+=a[i]*power(i,2);
+if(temp1==0)
+{
+	i=-1;
+}
+}
+else 
+	continue;
 }
 printf("\n number is: %d",num);
 return(0);
 }
  
-
 
 
 
