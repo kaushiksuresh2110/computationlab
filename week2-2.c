@@ -48,7 +48,9 @@ if(temp1==0)
 }
 }
 else 
-	continue;
+{a[i]=0;
+ continue;
+}
 }
 printf("\n number is: %d",num);
 return(0);
