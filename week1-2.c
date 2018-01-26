@@ -3,13 +3,13 @@ int factorial(int);
 int power(int , int );
 int power(int z,int x)
 {int product=1;
-for(int i=1;i<=z;i++)
+for(int i=1;i<=z;i++) // for loop to calculate power
 {product*=x;
 }
 return product;
 }
 
-int factorial(int t)
+int factorial(int t) //function to calculate factorial
 {int fact=1;
 if (t>0)
 {for(int i=1;i<=t;i++)
@@ -28,7 +28,7 @@ printf("\nenter the x,y and power n");
 scanf("%d%d%d",&x,&y,&n);
 //RHS
 for (int i=0;i<=n;i++)
-{sum+=factorial(n)/((factorial(i))*(factorial(n-i)))*power((n-i),x)*power(i,y);
+{sum+=factorial(n)/((factorial(i))*(factorial(n-i)))*power((n-i),x)*power(i,y);// binomial sum eq (a+b)^n = sum(ncr x^r *y^(n-r))
 }
 //LHS
 int c,p;
