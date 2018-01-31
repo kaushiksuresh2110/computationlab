@@ -1,6 +1,7 @@
+//program to convert decimal to binary
 #include<stdio.h>
 int power(int , int );
-int power(int z,int x)
+int power(int z,int x)           //to calculate the power of a number
 {int product=1;
 for(int i=1;i<=z;i++)
 {product*=x;
@@ -15,7 +16,7 @@ int temp=0;
 printf("\n enter the number:");
 scanf("%d",&num);
 temp =num;
-while(temp!=0)
+while(temp!=0)                     // decimal to binary conversion
 {
 rem=temp%2;
 temp=temp/2;
